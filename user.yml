@@ -1,0 +1,10 @@
+- name: User Setup
+  hosts: all
+  become: true
+  vars:
+    component: user
+    schema: true
+  tasks:
+    - name: Install NodeJS Setup
+      ansible.builtin.import_tasks:
+        file: nodejs.yml
